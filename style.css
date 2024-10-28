@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-color: #2c2c54;
+  }
+  
+  .background-animation {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #4d1b1b, #e44e4e, #814d4d, #872657);
+    background-size: 200% 200%;
+    animation: gradient-animation 8s infinite alternate;
+    z-index: -1;
+  }
+  
+  @keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+  
+  .todo-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fade-in 1s ease-out;
+  }
+  
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  h1 {
+    text-align: center;
+    color: #a31212;
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  
+  .input-container {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  
+  #taskInput {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #471010;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  #taskInput:focus {
+    border-color: #3d1313;
+  }
+  
+  button {
+    padding: 10px;
+    margin-left: 5px;
+    background-color: #3b1212;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #942727;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #f8f8f8;
+    border-left: 4px solid #2c0e0e;
+    border-radius: 4px;
+    transition: transform 0.2s;
+  }
+  
+  li:hover {
+    transform: scale(1.02);
+  }
+  
+  li span {
+    flex: 1;
+    color: #333;
+  }
+  
+  li button {
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+  }
+  
+  li button:hover {
+    background-color: #e60000;
+  }
+  
